@@ -1,0 +1,24 @@
+const mongoose = require('mongoose')
+
+// connection
+mongoose.connect('mongodb://localhost:27017/patanjali').then(()=>{
+    console.log('Connection Successfully')
+}).catch((error)=>{
+    console.log(error)
+})
+
+// Schema 
+StudentSchema = mongoose.Schema({
+    name:String,
+    email:String,
+    trade:String,
+    age:Number,
+    address:String
+})
+
+// model 
+StudentModel = mongoose.model('student',StudentSchema)
+
+module.exports = StudentModel
+
+
