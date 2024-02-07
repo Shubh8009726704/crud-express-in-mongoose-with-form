@@ -27,28 +27,29 @@
 
 <body>
       <div class='container'>
+        <div class="row">
         <form class='col-5 card mx-auto p-5 bg-black shadow-lg ' action="/edit/<%= editStudent._id %>" method='POST'>  
-            <h1 class="text-warning mb-4 text-center">Update Student Data</h1>        
-              <div class="mb-3">
+            <h1 class="col col-sm-4 text-warning mb-4 text-center">Update Student Data</h1>        
+              <div class="col col-sm-4 mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" value="<%= editStudent.name %>" >
               </div>
-              <div class="mb-3">
+              <div class="col col-sm-4 mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" name="email" value="<%= editStudent.email %>">
               </div>
-              
-
-               <div class="mb-3">
+             
+              <div class="col col-sm-4 mb-3 ">
                  <label for="age" class="form-label">Age</label>
                  <input type="text" class="form-control" name="age" value="<%= editStudent.age %>">
                 </div>
-               <div class="mb-3">
+               <div class="col col-sm-4 mb-3">
                  <label for="address" class="form-label">Address</label>
                  <input type="text" class="form-control" name="address" value="<%= editStudent.address %>">
                </div>
                <button type="submit" class="btn btn-primary w-25">Update</button>
         </form>
+      </div>
       </div>
 </body>
 
