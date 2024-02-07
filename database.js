@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 
 // connection
-mongoose.connect('mongodb://localhost:27017/patanjali').then(()=>{
+mongoose.connect('mongodb+srv://shubham:DT5SvH6z7hEx1gfs@crud.psxambf.mongodb.net/CrudExpress').then(()=>{
     console.log('Connection Successfully')
 }).catch((error)=>{
     console.log(error)
@@ -11,7 +11,7 @@ mongoose.connect('mongodb://localhost:27017/patanjali').then(()=>{
 StudentSchema = mongoose.Schema({
     name:String,
     email:String,
-    trade:String,
+    // trade:String,
     age:Number,
     address:String
 })
