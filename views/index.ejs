@@ -19,6 +19,8 @@
         color: blue;
         font-size: 40px;
         margin-top: 50px;
+        margin-bottom: 80px;
+        text-decoration: underline;
     }
     a{
         text-decoration: none;
@@ -34,16 +36,8 @@
         background-color: red;
         padding: 3px;
     }
-    .register{
-        height: 150px;
-        width: 50%;
-        background-color: black;
-        margin: auto;
-        padding: 1px;
-        border-radius: 10px;
-        margin-top: 30px;
-    }
-    h2{color:yellow;
+   
+    h2{color: white;
     font-size: 35px;}
     #reg{
         background-color: rgb(0, 157, 255);
@@ -53,10 +47,16 @@
         color: black;
         border-radius: 5px;
     }
+    h3{
+        text-align: center;
+        margin-left: 78px;
+        margin-top: 30px;
+    }
     </style>
 </head>
 <body>
     <h1>Student Data of NSTI Ramanthapur</h1>
+    <h3><a id='reg' href='/register'>Add New User</a></h3>
     <% if(students!= "") { %>
     <table border="1px" >
         <tr>
@@ -66,7 +66,6 @@
             <th>Age</th>
             <th>Address</th>
             <th>Operation</th>
-
         </tr>
         <% students.forEach((students,index)=>{
            %>
@@ -80,9 +79,6 @@
         </tr><% }) %>
     </table>
     <% }%>
-    <div class="register">
-        <h2>Click here for New User</h2>
-        <h3><a id='reg' href='/register'>Register here</a></h3>
-    </div>
+   
 </body>
 </html>
